@@ -1,0 +1,21 @@
+page {
+  font-size: 28px;
+}
+
+.blank-h(@height) when(@height >= 0) {
+  .blank-h-@{height} {
+    height: @height + 0px;
+  }
+  .blank-h((@height - 2));
+}
+
+.blank-h(100);
+
+.blank-w(@width) when(@width >= 0) {
+  .blank-w-@{width} {
+    width: @width + 0px;
+  }
+  .blank-w((@width - 2));
+}
+
+.blank-w(100);

@@ -1,0 +1,23 @@
+.page-home {
+  padding: 32px;
+
+  .page-item {
+    height: 50px;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: currentColor;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+  }
+
+  .page-item + .page-item {
+    margin-top: 20px;
+  }
+}

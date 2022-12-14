@@ -1,0 +1,42 @@
+@import "../../styles/index.less";
+
+.s-textarea {
+  width: 100%;
+  height: 140px;
+  line-height: 1.2;
+  border: @s-border;
+  border-radius: @s-border-radius;
+  padding: 4px;
+
+  &__real,
+  &__fake {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+    line-height: inherit;
+    color: inherit;
+    font-size: inherit;
+    white-space: pre-line;
+    word-break: break-all;
+    word-wrap: break-word;
+  }
+
+  &__fake {
+    overflow-y: auto;
+  }
+
+  &__real-placeholder,
+  &__fake-placeholder {
+    width: 100%;
+    height: 100%;
+    line-height: inherit;
+    color: @s-color-placeholder;
+    font-size: inherit;
+    white-space: pre-line;
+    word-break: break-all;
+    word-wrap: break-word;
+  }
+}
