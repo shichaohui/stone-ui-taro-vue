@@ -1,4 +1,6 @@
-const path = require("path");
+import path from "path";
+import devConfig from "./dev";
+import prodConfig from "./prod";
 
 const config = {
   projectName: "demo",
@@ -9,7 +11,7 @@ const config = {
     750: 1,
     828: 1.81 / 2,
   },
-  sourceRoot: "src",
+  sourceRoot: "example/src",
   outputRoot: "dist",
   plugins: [],
   defineConstants: {},
@@ -23,7 +25,8 @@ const config = {
     enable: false, // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
   },
   alias: {
-    "@": path.resolve(__dirname, "..", "src"),
+    "@": path.resolve(__dirname, "..", "example/src"),
+    "@packages": path.resolve(__dirname, "..", "packages"),
   },
   mini: {
     postcss: {
@@ -73,9 +76,9 @@ const config = {
   },
 };
 
-module.exports = function (merge) {
+export default function (merge) {
   if (process.env.NODE_ENV === "development") {
-    return merge({}, config, require("./dev"));
+    return merge({}, config, devConfig);
   }
-  return merge({}, config, require("./prod"));
-};
+  return merge({}, config, prodConfig);
+}

@@ -2,8 +2,8 @@
 
 ## 组件列表
 
-* [Textarea（多行输入框）](./src/components/textarea/README.md)
-* [Input（单行输入框）](./src/components/input/README.md)
+* [Textarea（多行输入框）](./components/textarea/README.md)
+* [Input（单行输入框）](./components/input/README.md)
 
 ## 组件导入
 

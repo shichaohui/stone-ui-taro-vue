@@ -23,7 +23,7 @@
         's-input__fake-placeholder': !showingValue,
         [`${placeholderClass}`]: !showingValue,
       }"
-      user-select="true"
+      :user-select="true"
       @tap="handleShowRealInput"
     >
       {{ showingValue || placeholder }}
@@ -33,6 +33,8 @@
 
 <script setup lang="ts">
 import { computed, ref } from "vue";
+
+import { InputProps } from "@tarojs/components/types/Input";
 
 import "./index.less";
 
@@ -49,7 +51,7 @@ interface Props {
   /** 最大输入长度 */
   maxlength?: number;
   /** 设置键盘右下角按钮的文字 */
-  confirmType?: string;
+  confirmType?: keyof InputProps.ConfirmType;
 }
 
 const props = withDefaults(defineProps<Props>(), {

@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es2017",
-    "module": "commonjs",
+    "target": "es5",
+    "module": "ESNext",
     "removeComments": false,
     "preserveConstEnums": true,
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "noImplicitAny": false,
     "allowSyntheticDefaultImports": true,
-    "outDir": "lib",
+    "outDir": "./lib",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "strictNullChecks": true,
@@ -18,8 +18,12 @@
     "jsx": "preserve",
     "allowJs": true,
     "resolveJsonModule": true,
-    "typeRoots": ["node_modules/@types"]
+    "typeRoots": ["node_modules/@types"],
+    "paths": {
+      "@/*": ["./demo/src/*"],
+      "@packages/*": ["./packages/*"]
+    }
   },
-  "include": ["./src", "./types"],
+  "include": ["./example/src", "./example/types", "./packages"],
   "compileOnSave": false
 }

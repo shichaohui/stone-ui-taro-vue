@@ -21,7 +21,7 @@
         's-textarea__fake-placeholder': !showingValue,
         [`${placeholderClass}`]: !showingValue,
       }"
-      user-select="true"
+      :user-select="true"
       @tap="handleShowRealTextarea"
     >
       {{ showingValue || placeholder }}
@@ -47,7 +47,7 @@ interface Props {
   /** 最大输入长度 */
   maxlength?: number;
   /** 设置键盘右下角按钮的文字 */
-  confirmType?: string;
+  confirmType?: "send" | "search" | "next" | "go" | "done" | "return";
 }
 
 const props = withDefaults(defineProps<Props>(), {
