@@ -86,6 +86,7 @@
     "postcss": "^8.4.20",
     "rimraf": "^3.0.2",
     "rollup": "^3.9.0",
+    "rollup-plugin-alias": "^2.2.0",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-postcss": "^4.0.2",

@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "./dist",
-  "projectname": "demo",
-  "description": "A demo for stone-ui-taro-vue",
+  "projectname": "example",
+  "description": "A example for stone-ui-taro-vue",
   "appid": "wx191683acb2415044",
   "setting": {
     "urlCheck": true,

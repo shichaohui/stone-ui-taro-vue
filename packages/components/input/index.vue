@@ -35,6 +35,7 @@
 import { computed, ref } from "vue";
 
 import { InputProps } from "@tarojs/components/types/Input";
+import platformUtils from "@packages/utils/platform";
 
 import "./index.less";
 
@@ -71,7 +72,7 @@ interface Emits {
 const emits = defineEmits<Emits>();
 
 // 是否展示真实输入框
-const showRealInput = ref(false);
+const showRealInput = ref(platformUtils.isH5());
 // 真实输入框是否有焦点
 const hasFocus = ref(false);
 
@@ -90,6 +91,9 @@ function handleFocus() {
 
 // 真实输入框失去焦点
 function handleBlur() {
+  if (platformUtils.isH5()) {
+    return;
+  }
   showRealInput.value = false;
   if (hasFocus.value) {
     hasFocus.value = false;

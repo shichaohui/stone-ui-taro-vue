@@ -32,6 +32,8 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 
+import platformUtils from "@packages/utils/platform";
+
 import "./index.less";
 
 // 定义组件参数
@@ -67,7 +69,7 @@ interface Emits {
 const emits = defineEmits<Emits>();
 
 // 是否展示真实输入框
-const showRealTextarea = ref(false);
+const showRealTextarea = ref(platformUtils.isH5());
 // 正在展示的输入内容
 const showingValue = computed(() => props.modelValue || props.value || "");
 
@@ -78,6 +80,9 @@ function handleShowRealTextarea() {
 
 // 真实输入框失去焦点
 function handleBlur() {
+  if (platformUtils.isH5()) {
+    return;
+  }
   showRealTextarea.value = false;
 }
 

@@ -3,7 +3,7 @@ import devConfig from "./dev";
 import prodConfig from "./prod";
 
 const config = {
-  projectName: "demo",
+  projectName: "example",
   date: "2022-12-12",
   designWidth: 750,
   deviceRatio: {
