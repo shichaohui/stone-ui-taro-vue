@@ -1,10 +1,13 @@
 # stone-ui-taro-vue
 
-Common ui for taro3 and vue3
+[Taro3]:https://taro.jd.com/
+[Vue3]:https://cn.vuejs.org/
+
+Common ui for [Taro3] and [Vue3].
 
 ## Components
 
-[view all components](./ui/README.md)
+[view all components](./packages/README.md)
 
 ## Development
 

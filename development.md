@@ -11,5 +11,5 @@
 
 ## 新建组件
 
-0. 复制 [组件模板](./packages/components/tmpl);
-1. 在 [入口处](./packages/index.js) 导出组件;
+1. 复制 [组件模板](./packages/components/tmpl);
+2. 在 [入口处](./packages/index.js) 导出组件;
