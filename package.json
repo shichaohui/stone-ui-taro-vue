@@ -1,7 +1,7 @@
 {
   "name": "stone-ui-taro-vue",
-  "version": "1.0.0",
-  "private": true,
+  "version": "0.0.5",
+  "private": false,
   "description": "Common ui for Taro3 and Vue3",
   "templateInfo": {
     "name": "default",
